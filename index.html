@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodmarsh Magic | Gourmet Marshmallow Kingdom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container" onclick="window.location.href='index.html'">
+            <img src="images/rodmarsh magic logo.png" alt="Rodmarsh Magic Logo" onerror="this.src='https://placehold.co/100x100?text=RM+Logo'">
+            <div class="business-name">Rodmarsh Magic</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="orders.html">ORDERS</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="cart.html" title="Cart"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            <a href="login.html" title="Member Login"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to the Ultimate Marshmallow Kingdom</h1>
+            <p class="tagline">Indulge in clouds of sweetness from the ultimate marshmallow kingdom. Gourmet flavors, perfect for s'mores, hot cocoa, or standalone bliss.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="products.html" class="btn">Explore Our Flavors</a>
+                <a href="#about" class="btn btn-outline">Our Story</a>
+            </div>
+        </section>
+
+        <section id="about" class="info-section">
+            <div class="info-content">
+                <h2>Handcrafted with Love in the Philippines</h2>
+                <p>Rodmarsh Magic started with a simple dream: to create the fluffiest, most flavorful marshmallows that transport you to a world of pure bliss. Every single batch is handcrafted using premium ingredients and traditional techniques, ensuring a "heavenly homemade" experience in every bite.</p>
+                <p style="margin-top: 20px;">Whether you're looking for the perfect topping for your hot cocoa or a gourmet treat for your next celebration, we've got the magic you need.</p>
+                <a href="products.html" class="btn" style="margin-top: 30px;">Shop the Collection</a>
+            </div>
+            <div class="info-image">
+                <img src="images/Classic Vanilla.webp" alt="Marshmallow Making">
+            </div>
+        </section>
+
+        <section class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud-Like Texture</h3>
+                <p>Unbelievably soft and fluffy, melting perfectly in your mouth or over a fire.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-magic"></i>
+                <h3>Gourmet Flavors</h3>
+                <p>From Classic Vanilla to Maple Bacon, we push the boundaries of marshmallow magic.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Premium Ingredients</h3>
+                <p>No artificial preservatives. Just pure sugar, real fruit, and premium extracts.</p>
+            </div>
+        </section>
+
+        <section class="products-container">
+            <h2 class="section-title">Featured Delights</h2>
+            <div class="product-grid" id="featured-products">
+                <div class="product-card">
+                    <img src="images/Classic Vanilla.webp" alt="Classic Vanilla">
+                    <h3>Classic Vanilla</h3>
+                    <p class="price">₱299.00</p>
+                    <button class="btn add-to-cart" data-id="1" data-name="Classic Vanilla" data-price="299" data-image="images/Classic Vanilla.webp">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/Double Chocolate.jpg" alt="Double Chocolate">
+                    <h3>Double Chocolate</h3>
+                    <p class="price">₱349.00</p>
+                    <button class="btn add-to-cart" data-id="2" data-name="Double Chocolate" data-price="349" data-image="images/Double Chocolate.jpg">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/Strawberry Dream.jpg" alt="Strawberry Dream">
+                    <h3>Strawberry Dream</h3>
+                    <p class="price">₱329.00</p>
+                    <button class="btn add-to-cart" data-id="3" data-name="Strawberry Dream" data-price="329" data-image="images/Strawberry Dream.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="products.html" class="btn">View All 20+ Flavors</a>
+            </div>
+        </section>
+
+        <section class="info-section reverse">
+            <div class="info-content">
+                <h2>The Perfect Gift</h2>
+                <p>Looking for a unique gift for a birthday, wedding, or "just because"? Our gourmet marshmallow boxes are beautifully packaged and ready to bring a smile to anyone's face.</p>
+                <ul style="list-style: none; margin: 20px 0;">
+                    <li><i class="fas fa-check" style="color: var(--success-color); margin-right: 10px;"></i> Custom Gift Notes</li>
+                    <li><i class="fas fa-check" style="color: var(--success-color); margin-right: 10px;"></i> Elegant Packaging</li>
+                    <li><i class="fas fa-check" style="color: var(--success-color); margin-right: 10px;"></i> Nationwide Shipping</li>
+                </ul>
+                <a href="products.html" class="btn">Build a Box</a>
+            </div>
+            <div class="info-image">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gift Packaging">
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2 class="section-title">What Our Royalty Says</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"The best marshmallows I've ever tasted! They really do feel like eating a cloud. The Double Chocolate is a game changer for my s'mores nights."</p>
+                    <h4 style="margin-top: 20px;">- Maria Santos</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I sent a box to my friend for her birthday and she couldn't stop raving about the packaging and the unique flavors. Rodmarsh Magic is my new go-to for gifts!"</p>
+                    <h4 style="margin-top: 20px;">- Juan Dela Cruz</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Fast delivery and even better taste. The Peppermint Cloud is incredible in hot cocoa. Highly recommend to anyone with a sweet tooth!"</p>
+                    <h4 style="margin-top: 20px;">- Elena Garcia</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="images/rodmarsh magic logo.png" alt="Rodmarsh Magic Logo" style="height: 120px; width: auto; margin-bottom: 20px;">
+                <h4>Rodmarsh Magic</h4>
+                <p>Indulge in clouds of sweetness.</p>
+                <p><i class="fas fa-envelope"></i> jvasquez@immaculada.edu.ph</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Join our sweet community!</p>
+                <div class="form-group" style="display: flex; gap: 10px; margin-top: 15px;">
+                    <input type="email" placeholder="Your email">
+                    <button class="btn" style="padding: 10px 20px;">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rodmarsh Magic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

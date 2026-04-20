@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Orders | Rodmarsh Magic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container" onclick="window.location.href='index.html'">
+            <img src="images/rodmarsh magic logo.png" alt="Rodmarsh Magic Logo" onerror="this.src='https://placehold.co/100x100?text=RM+Logo'">
+            <div class="business-name">Rodmarsh Magic</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="orders.html" class="active">ORDERS</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="cart.html" title="Cart"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            <a href="login.html" title="Member Login"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <main class="products-container" style="min-height: 60vh;">
+        <h2 class="section-title">Your Order History</h2>
+        <div id="orders-list">
+            <!-- Orders will be rendered here -->
+            <p style="text-align: center;">No orders found yet. Time to <a href="products.html">start shopping</a>!</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="images/rodmarsh magic logo.png" alt="Rodmarsh Magic Logo" style="height: 120px; width: auto; margin-bottom: 20px;">
+                <h4>Rodmarsh Magic</h4>
+                <p>Indulge in clouds of sweetness.</p>
+                <p><i class="fas fa-envelope"></i> jvasquez@immaculada.edu.ph</p>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <div class="form-group" style="display: flex; gap: 10px;">
+                    <input type="email" placeholder="Your email address">
+                    <button class="btn">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rodmarsh Magic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const isLoggedIn = localStorage.getItem('rodmarsh_logged_in') === 'true';
+            
+            if (!isLoggedIn) {
+                // If notification system is not yet initialized by cart.js
+                const container = document.createElement('div');
+                container.className = 'notification-container';
+                document.body.appendChild(container);
+                
+                const notification = document.createElement('div');
+                notification.className = 'notification error show';
+                notification.innerHTML = '<i class="fas fa-exclamation-circle"></i> <span>Please login to view your orders!</span>';
+                container.appendChild(notification);
+                
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 2000);
+                return;
+            }
+
+            const ordersList = document.getElementById('orders-list');
+            const lastOrder = JSON.parse(localStorage.getItem('last_order'));
+
+            if (lastOrder && ordersList) {
+                ordersList.innerHTML = `
+                    <div style="border: 2px solid var(--main-color); border-radius: 15px; padding: 20px; max-width: 600px; margin: 0 auto;">
+                        <h3 style="margin-bottom: 15px;">Order placed on ${lastOrder.date}</h3>
+                        <ul style="list-style: none; margin-bottom: 15px;">
+                            ${lastOrder.items.map(item => `
+                                <li style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee;">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <img src="${item.image}" alt="${item.name}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 5px;">
+                                        <span>${item.name} x ${item.quantity}</span>
+                                    </div>
+                                    <span>₱${(item.price * item.quantity).toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                        <div style="text-align: right; font-weight: bold; font-size: 1.4rem; color: var(--accent-color); margin-top: 15px;">
+                            Total Paid: ₱${lastOrder.total.toLocaleString(undefined, {minimumFractionDigits: 2})}
+                        </div>
+                        <div style="margin-top: 20px; text-align: center;">
+                            <span class="btn" style="background-color: var(--success-color); cursor: default;">Processing</span>
+                        </div>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

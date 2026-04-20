@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Gourmet Products | Rodmarsh Magic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container" onclick="window.location.href='index.html'">
+            <img src="images/rodmarsh magic logo.png" alt="Rodmarsh Magic Logo" onerror="this.src='https://placehold.co/100x100?text=RM+Logo'">
+            <div class="business-name">Rodmarsh Magic</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="products.html" class="active">PRODUCTS</a></li>
+                <li><a href="orders.html">ORDERS</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="cart.html" title="Cart"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            <a href="login.html" title="Member Login"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <main class="products-container">
+        <h2 class="section-title">Our Gourmet Marshmallows</h2>
+        <div class="product-grid" id="all-products">
+            <div class="product-card">
+                <img src="images/Classic Vanilla.webp" alt="Classic Vanilla">
+                <h3>Classic Vanilla</h3>
+                <p class="price">₱299.00</p>
+                <button class="btn add-to-cart" data-id="1" data-name="Classic Vanilla" data-price="299" data-image="images/Classic Vanilla.webp">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Double Chocolate.jpg" alt="Double Chocolate">
+                <h3>Double Chocolate</h3>
+                <p class="price">₱349.00</p>
+                <button class="btn add-to-cart" data-id="2" data-name="Double Chocolate" data-price="349" data-image="images/Double Chocolate.jpg">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Strawberry Dream.jpg" alt="Strawberry Dream">
+                <h3>Strawberry Dream</h3>
+                <p class="price">₱329.00</p>
+                <button class="btn add-to-cart" data-id="3" data-name="Strawberry Dream" data-price="329" data-image="images/Strawberry Dream.jpg">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Peppermint Cloud.webp" alt="Peppermint Cloud">
+                <h3>Peppermint Cloud</h3>
+                <p class="price">₱329.00</p>
+                <button class="btn add-to-cart" data-id="4" data-name="Peppermint Cloud" data-price="329" data-image="images/Peppermint Cloud.webp">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Salted Caramel.jpg" alt="Salted Caramel">
+                <h3>Salted Caramel</h3>
+                <p class="price">₱379.00</p>
+                <button class="btn add-to-cart" data-id="5" data-name="Salted Caramel" data-price="379" data-image="images/Salted Caramel.jpg">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Lemon Zest.webp" alt="Lemon Zest">
+                <h3>Lemon Zest</h3>
+                <p class="price">₱319.00</p>
+                <button class="btn add-to-cart" data-id="6" data-name="Lemon Zest" data-price="319" data-image="images/Lemon Zest.webp">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Birthday Cake.jpg" alt="Birthday Cake">
+                <h3>Birthday Cake</h3>
+                <p class="price">₱399.00</p>
+                <button class="btn add-to-cart" data-id="7" data-name="Birthday Cake" data-price="399" data-image="images/Birthday Cake.jpg">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Espresso Bite.jpg" alt="Espresso Bite">
+                <h3>Espresso Bite</h3>
+                <p class="price">₱349.00</p>
+                <button class="btn add-to-cart" data-id="8" data-name="Espresso Bite" data-price="349" data-image="images/Espresso Bite.jpg">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Matcha Green Tea.jpg" alt="Matcha Green Tea">
+                <h3>Matcha Green Tea</h3>
+                <p class="price">₱379.00</p>
+                <button class="btn add-to-cart" data-id="9" data-name="Matcha Green Tea" data-price="379" data-image="images/Matcha Green Tea.jpg">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Honey Lavender.webp" alt="Honey Lavender">
+                <h3>Honey Lavender</h3>
+                <p class="price">₱369.00</p>
+                <button class="btn add-to-cart" data-id="10" data-name="Honey Lavender" data-price="369" data-image="images/Honey Lavender.webp">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Tropical Mango.webp" alt="Tropical Mango">
+                <h3>Tropical Mango</h3>
+                <p class="price">₱339.00</p>
+                <button class="btn add-to-cart" data-id="11" data-name="Tropical Mango" data-price="339" data-image="images/Tropical Mango.webp">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Blackberry Swirl.webp" alt="Blackberry Swirl">
+                <h3>Blackberry Swirl</h3>
+                <p class="price">₱349.00</p>
+                <button class="btn add-to-cart" data-id="12" data-name="Blackberry Swirl" data-price="349" data-image="images/Blackberry Swirl.webp">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/S'more Special.jpg" alt="S'more Special">
+                <h3>S'more Special</h3>
+                <p class="price">₱429.00</p>
+                <button class="btn add-to-cart" data-id="13" data-name="S'more Special" data-price="429" data-image="images/S'more Special.jpg">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Cinnamon Toast.webp" alt="Cinnamon Toast">
+                <h3>Cinnamon Toast</h3>
+                <p class="price">₱329.00</p>
+                <button class="btn add-to-cart" data-id="14" data-name="Cinnamon Toast" data-price="329" data-image="images/Cinnamon Toast.webp">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Red Velvet.jpg" alt="Red Velvet">
+                <h3>Red Velvet</h3>
+                <p class="price">₱399.00</p>
+                <button class="btn add-to-cart" data-id="15" data-name="Red Velvet" data-price="399" data-image="images/Red Velvet.jpg">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Pistachio Paradise.jpg" alt="Pistachio Paradise">
+                <h3>Pistachio Paradise</h3>
+                <p class="price">₱389.00</p>
+                <button class="btn add-to-cart" data-id="16" data-name="Pistachio Paradise" data-price="389" data-image="images/Pistachio Paradise.jpg">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Toasted Coconut.jpg" alt="Toasted Coconut">
+                <h3>Toasted Coconut</h3>
+                <p class="price">₱349.00</p>
+                <button class="btn add-to-cart" data-id="17" data-name="Toasted Coconut" data-price="349" data-image="images/Toasted Coconut.jpg">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Blueberry Muffin.jpg" alt="Blueberry Muffin">
+                <h3>Blueberry Muffin</h3>
+                <p class="price">₱369.00</p>
+                <button class="btn add-to-cart" data-id="18" data-name="Blueberry Muffin" data-price="369" data-image="images/Blueberry Muffin.jpg">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Peach Bellini.webp" alt="Peach Bellini">
+                <h3>Peach Bellini</h3>
+                <p class="price">₱379.00</p>
+                <button class="btn add-to-cart" data-id="19" data-name="Peach Bellini" data-price="379" data-image="images/Peach Bellini.webp">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Maple bacon.jpg" alt="Maple Bacon">
+                <h3>Maple Bacon</h3>
+                <p class="price">₱449.00</p>
+                <button class="btn add-to-cart" data-id="20" data-name="Maple Bacon" data-price="449" data-image="images/Maple bacon.jpg">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="images/rodmarsh magic logo.png" alt="Rodmarsh Magic Logo" style="height: 120px; width: auto; margin-bottom: 20px;">
+                <h4>Rodmarsh Magic</h4>
+                <p>Indulge in clouds of sweetness.</p>
+                <p><i class="fas fa-envelope"></i> jvasquez@immaculada.edu.ph</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Join our sweet community!</p>
+                <div class="form-group" style="display: flex; gap: 10px; margin-top: 15px;">
+                    <input type="email" placeholder="Your email">
+                    <button class="btn" style="padding: 10px 20px;">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rodmarsh Magic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
