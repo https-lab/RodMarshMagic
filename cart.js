@@ -1,6 +1,7 @@
 // Shopping Cart and Auth Functionality
 let cart = JSON.parse(localStorage.getItem('rodmarsh_cart')) || [];
 let isLoggedIn = localStorage.getItem('rodmarsh_logged_in') === 'true';
+const pendingAddNotifications = {};
 
 // Notification System
 function showNotification(message, type = 'success') {
@@ -44,7 +45,30 @@ function saveCart() {
     updateCartCount();
 }
 
-function addToCart(id, name, price, image) {
+function queueAddNotification(productName, quantityAdded) {
+    const key = productName;
+    if (!pendingAddNotifications[key]) {
+        pendingAddNotifications[key] = { quantity: 0, timer: null };
+    }
+
+    pendingAddNotifications[key].quantity += quantityAdded;
+
+    if (pendingAddNotifications[key].timer) {
+        clearTimeout(pendingAddNotifications[key].timer);
+    }
+
+    pendingAddNotifications[key].timer = setTimeout(() => {
+        const totalAdded = pendingAddNotifications[key].quantity;
+        if (totalAdded > 1) {
+            showNotification(`${totalAdded}x ${productName} added`, 'success');
+        } else {
+            showNotification(`${productName} added to cart!`, 'success');
+        }
+        delete pendingAddNotifications[key];
+    }, 450);
+}
+
+function addToCart(id, name, price, image, quantity = 1) {
     if (!isLoggedIn) {
         showNotification('Please login first to add products to your cart!', 'error');
         setTimeout(() => {
@@ -53,14 +77,15 @@ function addToCart(id, name, price, image) {
         return;
     }
 
+    const qtyToAdd = Math.max(1, Number(quantity) || 1);
     const existingItem = cart.find(item => item.id === id);
     if (existingItem) {
-        existingItem.quantity += 1;
+        existingItem.quantity += qtyToAdd;
     } else {
-        cart.push({ id, name, price: parseFloat(price), image, quantity: 1 });
+        cart.push({ id, name, price: parseFloat(price), image, quantity: qtyToAdd });
     }
     saveCart();
-    showNotification(`${name} added to cart!`, 'success');
+    queueAddNotification(name, qtyToAdd);
 }
 
 function removeFromCart(id) {
@@ -134,14 +159,6 @@ function updateAuthUI() {
             authNavText.addEventListener('click', logout);
         }
         
-        loginLinks.forEach(link => {
-            if (link.querySelector('.fa-user')) {
-                link.title = 'Logout';
-                link.href = '#';
-                link.classList.add('logout-btn');
-                link.addEventListener('click', logout);
-            }
-        });
     }
 }
 

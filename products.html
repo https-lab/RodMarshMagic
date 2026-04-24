@@ -31,7 +31,6 @@
                 <span></span>
             </button>
         <div class="header-icons">
-            <a href="login.html" title="Member Login"><i class="fas fa-user"></i></a>
             <a href="cart.html" title="Cart"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
         </div>
         </div>
@@ -253,9 +252,7 @@
 
             addToCartBtn.addEventListener('click', () => {
                 if (!previewProduct) return;
-                for (let i = 0; i < previewQuantity; i += 1) {
-                    addToCart(previewProduct.id, previewProduct.name, previewProduct.price, previewProduct.image);
-                }
+                addToCart(previewProduct.id, previewProduct.name, previewProduct.price, previewProduct.image, previewQuantity);
                 closePreview();
             });
 
