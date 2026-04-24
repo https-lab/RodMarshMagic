@@ -160,6 +160,24 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
     updateAuthUI();
 
+    // Mobile nav toggle for all pages
+    const burgerButton = document.getElementById('burger-toggle');
+    const nav = document.getElementById('main-nav');
+    if (burgerButton && nav) {
+        burgerButton.addEventListener('click', () => {
+            nav.classList.toggle('mobile-open');
+            const isExpanded = nav.classList.contains('mobile-open');
+            burgerButton.setAttribute('aria-expanded', String(isExpanded));
+        });
+
+        nav.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('mobile-open');
+                burgerButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+
     // Add to cart buttons
     document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', (e) => {

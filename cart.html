@@ -16,7 +16,7 @@
             <img src="images/rodmarsh magic logo.png" alt="Rodmarsh Magic Logo" onerror="this.src='https://placehold.co/100x100?text=RM+Logo'">
             <div class="business-name">Rodmarsh Magic</div>
         </div>
-        <nav>
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="products.html">PRODUCTS</a></li>
@@ -24,9 +24,15 @@
                 <li><a href="login.html">LOGIN</a></li>
             </ul>
         </nav>
-        <div class="header-icons">
-            <a href="cart.html" title="Cart"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
-            <a href="login.html" title="Member Login"><i class="fas fa-user"></i></a>
+        <div class="mobile-header-actions">
+            <button class="burger-toggle" id="burger-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header-icons">
+                <a href="cart.html" title="Cart"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            </div>
         </div>
     </header>
 
@@ -86,3 +92,4 @@
     <script src="cart.js"></script>
 </body>
 </html>
+

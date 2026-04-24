@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <header>
+<body class="products-page">
+    <header class="products-header">
         <div class="logo-container" onclick="window.location.href='index.html'">
             <img src="images/rodmarsh magic logo.png" alt="Rodmarsh Magic Logo" onerror="this.src='https://placehold.co/100x100?text=RM+Logo'">
             <div class="business-name">Rodmarsh Magic</div>
         </div>
-        <nav>
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="products.html" class="active">PRODUCTS</a></li>
@@ -24,9 +24,16 @@
                 <li><a href="login.html">LOGIN</a></li>
             </ul>
         </nav>
+        <div class="mobile-header-actions">
+            <button class="burger-toggle" id="burger-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         <div class="header-icons">
-            <a href="cart.html" title="Cart"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
             <a href="login.html" title="Member Login"><i class="fas fa-user"></i></a>
+            <a href="cart.html" title="Cart"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+        </div>
         </div>
     </header>
 
@@ -34,121 +41,121 @@
         <h2 class="section-title">Our Gourmet Marshmallows</h2>
         <div class="product-grid" id="all-products">
             <div class="product-card">
-                <img src="images/Classic Vanilla.webp" alt="Classic Vanilla">
+                <img src="images/Classic Vanilla.webp" alt="Classic Vanilla" class="preview-image" data-id="1" data-name="Classic Vanilla" data-price="299" data-image="images/Classic Vanilla.webp">
                 <h3>Classic Vanilla</h3>
                 <p class="price">₱299.00</p>
                 <button class="btn add-to-cart" data-id="1" data-name="Classic Vanilla" data-price="299" data-image="images/Classic Vanilla.webp">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Double Chocolate.jpg" alt="Double Chocolate">
+                <img src="images/Double Chocolate.jpg" alt="Double Chocolate" class="preview-image" data-id="2" data-name="Double Chocolate" data-price="349" data-image="images/Double Chocolate.jpg">
                 <h3>Double Chocolate</h3>
                 <p class="price">₱349.00</p>
                 <button class="btn add-to-cart" data-id="2" data-name="Double Chocolate" data-price="349" data-image="images/Double Chocolate.jpg">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Strawberry Dream.jpg" alt="Strawberry Dream">
+                <img src="images/Strawberry Dream.jpg" alt="Strawberry Dream" class="preview-image" data-id="3" data-name="Strawberry Dream" data-price="329" data-image="images/Strawberry Dream.jpg">
                 <h3>Strawberry Dream</h3>
                 <p class="price">₱329.00</p>
                 <button class="btn add-to-cart" data-id="3" data-name="Strawberry Dream" data-price="329" data-image="images/Strawberry Dream.jpg">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Peppermint Cloud.webp" alt="Peppermint Cloud">
+                <img src="images/Peppermint Cloud.webp" alt="Peppermint Cloud" class="preview-image" data-id="4" data-name="Peppermint Cloud" data-price="329" data-image="images/Peppermint Cloud.webp">
                 <h3>Peppermint Cloud</h3>
                 <p class="price">₱329.00</p>
                 <button class="btn add-to-cart" data-id="4" data-name="Peppermint Cloud" data-price="329" data-image="images/Peppermint Cloud.webp">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Salted Caramel.jpg" alt="Salted Caramel">
+                <img src="images/Salted Caramel.jpg" alt="Salted Caramel" class="preview-image" data-id="5" data-name="Salted Caramel" data-price="379" data-image="images/Salted Caramel.jpg">
                 <h3>Salted Caramel</h3>
                 <p class="price">₱379.00</p>
                 <button class="btn add-to-cart" data-id="5" data-name="Salted Caramel" data-price="379" data-image="images/Salted Caramel.jpg">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Lemon Zest.webp" alt="Lemon Zest">
+                <img src="images/Lemon Zest.webp" alt="Lemon Zest" class="preview-image" data-id="6" data-name="Lemon Zest" data-price="319" data-image="images/Lemon Zest.webp">
                 <h3>Lemon Zest</h3>
                 <p class="price">₱319.00</p>
                 <button class="btn add-to-cart" data-id="6" data-name="Lemon Zest" data-price="319" data-image="images/Lemon Zest.webp">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Birthday Cake.jpg" alt="Birthday Cake">
+                <img src="images/Birthday Cake.jpg" alt="Birthday Cake" class="preview-image" data-id="7" data-name="Birthday Cake" data-price="399" data-image="images/Birthday Cake.jpg">
                 <h3>Birthday Cake</h3>
                 <p class="price">₱399.00</p>
                 <button class="btn add-to-cart" data-id="7" data-name="Birthday Cake" data-price="399" data-image="images/Birthday Cake.jpg">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Espresso Bite.jpg" alt="Espresso Bite">
+                <img src="images/Espresso Bite.jpg" alt="Espresso Bite" class="preview-image" data-id="8" data-name="Espresso Bite" data-price="349" data-image="images/Espresso Bite.jpg">
                 <h3>Espresso Bite</h3>
                 <p class="price">₱349.00</p>
                 <button class="btn add-to-cart" data-id="8" data-name="Espresso Bite" data-price="349" data-image="images/Espresso Bite.jpg">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Matcha Green Tea.jpg" alt="Matcha Green Tea">
+                <img src="images/Matcha Green Tea.jpg" alt="Matcha Green Tea" class="preview-image" data-id="9" data-name="Matcha Green Tea" data-price="379" data-image="images/Matcha Green Tea.jpg">
                 <h3>Matcha Green Tea</h3>
                 <p class="price">₱379.00</p>
                 <button class="btn add-to-cart" data-id="9" data-name="Matcha Green Tea" data-price="379" data-image="images/Matcha Green Tea.jpg">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Honey Lavender.webp" alt="Honey Lavender">
+                <img src="images/Honey Lavender.webp" alt="Honey Lavender" class="preview-image" data-id="10" data-name="Honey Lavender" data-price="369" data-image="images/Honey Lavender.webp">
                 <h3>Honey Lavender</h3>
                 <p class="price">₱369.00</p>
                 <button class="btn add-to-cart" data-id="10" data-name="Honey Lavender" data-price="369" data-image="images/Honey Lavender.webp">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Tropical Mango.webp" alt="Tropical Mango">
+                <img src="images/Tropical Mango.webp" alt="Tropical Mango" class="preview-image" data-id="11" data-name="Tropical Mango" data-price="339" data-image="images/Tropical Mango.webp">
                 <h3>Tropical Mango</h3>
                 <p class="price">₱339.00</p>
                 <button class="btn add-to-cart" data-id="11" data-name="Tropical Mango" data-price="339" data-image="images/Tropical Mango.webp">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Blackberry Swirl.webp" alt="Blackberry Swirl">
+                <img src="images/Blackberry Swirl.webp" alt="Blackberry Swirl" class="preview-image" data-id="12" data-name="Blackberry Swirl" data-price="349" data-image="images/Blackberry Swirl.webp">
                 <h3>Blackberry Swirl</h3>
                 <p class="price">₱349.00</p>
                 <button class="btn add-to-cart" data-id="12" data-name="Blackberry Swirl" data-price="349" data-image="images/Blackberry Swirl.webp">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/S'more Special.jpg" alt="S'more Special">
+                <img src="images/S'more Special.jpg" alt="S'more Special" class="preview-image" data-id="13" data-name="S'more Special" data-price="429" data-image="images/S'more Special.jpg">
                 <h3>S'more Special</h3>
                 <p class="price">₱429.00</p>
                 <button class="btn add-to-cart" data-id="13" data-name="S'more Special" data-price="429" data-image="images/S'more Special.jpg">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Cinnamon Toast.webp" alt="Cinnamon Toast">
+                <img src="images/Cinnamon Toast.webp" alt="Cinnamon Toast" class="preview-image" data-id="14" data-name="Cinnamon Toast" data-price="329" data-image="images/Cinnamon Toast.webp">
                 <h3>Cinnamon Toast</h3>
                 <p class="price">₱329.00</p>
                 <button class="btn add-to-cart" data-id="14" data-name="Cinnamon Toast" data-price="329" data-image="images/Cinnamon Toast.webp">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Red Velvet.jpg" alt="Red Velvet">
+                <img src="images/Red Velvet.jpg" alt="Red Velvet" class="preview-image" data-id="15" data-name="Red Velvet" data-price="399" data-image="images/Red Velvet.jpg">
                 <h3>Red Velvet</h3>
                 <p class="price">₱399.00</p>
                 <button class="btn add-to-cart" data-id="15" data-name="Red Velvet" data-price="399" data-image="images/Red Velvet.jpg">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Pistachio Paradise.jpg" alt="Pistachio Paradise">
+                <img src="images/Pistachio Paradise.jpg" alt="Pistachio Paradise" class="preview-image" data-id="16" data-name="Pistachio Paradise" data-price="389" data-image="images/Pistachio Paradise.jpg">
                 <h3>Pistachio Paradise</h3>
                 <p class="price">₱389.00</p>
                 <button class="btn add-to-cart" data-id="16" data-name="Pistachio Paradise" data-price="389" data-image="images/Pistachio Paradise.jpg">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Toasted Coconut.jpg" alt="Toasted Coconut">
+                <img src="images/Toasted Coconut.jpg" alt="Toasted Coconut" class="preview-image" data-id="17" data-name="Toasted Coconut" data-price="349" data-image="images/Toasted Coconut.jpg">
                 <h3>Toasted Coconut</h3>
                 <p class="price">₱349.00</p>
                 <button class="btn add-to-cart" data-id="17" data-name="Toasted Coconut" data-price="349" data-image="images/Toasted Coconut.jpg">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Blueberry Muffin.jpg" alt="Blueberry Muffin">
+                <img src="images/Blueberry Muffin.jpg" alt="Blueberry Muffin" class="preview-image" data-id="18" data-name="Blueberry Muffin" data-price="369" data-image="images/Blueberry Muffin.jpg">
                 <h3>Blueberry Muffin</h3>
                 <p class="price">₱369.00</p>
                 <button class="btn add-to-cart" data-id="18" data-name="Blueberry Muffin" data-price="369" data-image="images/Blueberry Muffin.jpg">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Peach Bellini.webp" alt="Peach Bellini">
+                <img src="images/Peach Bellini.webp" alt="Peach Bellini" class="preview-image" data-id="19" data-name="Peach Bellini" data-price="379" data-image="images/Peach Bellini.webp">
                 <h3>Peach Bellini</h3>
                 <p class="price">₱379.00</p>
                 <button class="btn add-to-cart" data-id="19" data-name="Peach Bellini" data-price="379" data-image="images/Peach Bellini.webp">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="images/Maple bacon.jpg" alt="Maple Bacon">
+                <img src="images/Maple bacon.jpg" alt="Maple Bacon" class="preview-image" data-id="20" data-name="Maple Bacon" data-price="449" data-image="images/Maple bacon.jpg">
                 <h3>Maple Bacon</h3>
                 <p class="price">₱449.00</p>
                 <button class="btn add-to-cart" data-id="20" data-name="Maple Bacon" data-price="449" data-image="images/Maple bacon.jpg">Add to Cart</button>
@@ -183,6 +190,83 @@
         </div>
     </footer>
 
+    <div class="product-preview-modal" id="product-preview-modal" aria-hidden="true">
+        <div class="product-preview-content">
+            <button class="preview-close" id="preview-close" aria-label="Close preview">&times;</button>
+            <img id="preview-modal-image" src="" alt="Product preview">
+            <h3 id="preview-modal-name"></h3>
+            <p class="price" id="preview-modal-price"></p>
+            <div class="preview-quantity-controls">
+                <button class="quantity-btn" id="preview-decrease" aria-label="Decrease quantity">-</button>
+                <span class="quantity-value" id="preview-quantity">1</span>
+                <button class="quantity-btn" id="preview-increase" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="btn" id="preview-add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
     <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('product-preview-modal');
+            const closeBtn = document.getElementById('preview-close');
+            const previewImage = document.getElementById('preview-modal-image');
+            const previewName = document.getElementById('preview-modal-name');
+            const previewPrice = document.getElementById('preview-modal-price');
+            const quantityText = document.getElementById('preview-quantity');
+            const addToCartBtn = document.getElementById('preview-add-to-cart');
+            const decreaseBtn = document.getElementById('preview-decrease');
+            const increaseBtn = document.getElementById('preview-increase');
+
+            let previewProduct = null;
+            let previewQuantity = 1;
+
+            function setPreviewQuantity(value) {
+                previewQuantity = Math.max(1, value);
+                quantityText.textContent = String(previewQuantity);
+            }
+
+            function closePreview() {
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+            }
+
+            function openPreview(product) {
+                previewProduct = product;
+                setPreviewQuantity(1);
+                previewImage.src = product.image;
+                previewImage.alt = product.name;
+                previewName.textContent = product.name;
+                previewPrice.textContent = `₱${Number(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+            }
+
+            document.querySelectorAll('.preview-image').forEach((imageElement) => {
+                imageElement.addEventListener('click', () => {
+                    openPreview(imageElement.dataset);
+                });
+            });
+
+            decreaseBtn.addEventListener('click', () => setPreviewQuantity(previewQuantity - 1));
+            increaseBtn.addEventListener('click', () => setPreviewQuantity(previewQuantity + 1));
+
+            addToCartBtn.addEventListener('click', () => {
+                if (!previewProduct) return;
+                for (let i = 0; i < previewQuantity; i += 1) {
+                    addToCart(previewProduct.id, previewProduct.name, previewProduct.price, previewProduct.image);
+                }
+                closePreview();
+            });
+
+            closeBtn.addEventListener('click', closePreview);
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closePreview();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+
